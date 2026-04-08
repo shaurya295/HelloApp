@@ -1,4 +1,6 @@
-public class HelloApp {
+package org.example;
+
+public class HelloApp1 {
 
     public static void main(String[] args) {
 
@@ -7,10 +9,15 @@ public class HelloApp {
             return;
         }
 
+        StringBuilder names = new StringBuilder();
+
         for (String name : args) {
-            System.out.println("Hello, " + name + "!");
+            if (names.length() > 0) {
+                names.append(", ");
+            }
+            names.append(name);
         }
 
+        System.out.println("Hello, " + names + "!");
     }
-
 }
